@@ -1,108 +1,16 @@
 <html>
 	<head>
-		<title></title>
-<style type="text/css">
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-body {
-  padding: 5vh 5vw;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: open sans, helvetica, sans-serif;
-  font-weight: 300;
-  line-height: 24px;
-}
-body h1 {
-  color: #496E8C;
-  text-align: center;
-  float: left;
-  width: calc(100% - 2.5vw);
-  padding-bottom: 2.5vh;
-  border-bottom: 4px solid #B6EFDF;
-}
-
-div {
-  float: left;
-  width: 7vw;
-  height: 7vh;
-  line-height: 7vh;
-  background: #496E8C;
-  color: #B6EFDF;
-  margin: .1em;
-  text-align: center;
-  -webkit-transform: scale(0.99) rotateY(0deg);
-  -moz-transform: scale(0.99) rotateY(0deg);
-  -ms-transform: scale(0.99) rotateY(0deg);
-  -o-transform: scale(0.99) rotateY(0deg);
-  transform: scale(0.99) rotateY(0deg);
-  position: relative;
-  z-index: 1;
-  -webkit-transition: all 0.8s ease, width 0s linear, height 0s linear;
-  -moz-transition: all 0.8s ease, width 0s linear, height 0s linear;
-  transition: all 0.8s ease, width 0s linear, height 0s linear;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  will-change: background, transform, color, z-index, width, height;
-}
-div.flip-it {
-  -webkit-transform: scale(2) rotateY(360deg);
-  -moz-transform: scale(2) rotateY(360deg);
-  -ms-transform: scale(2) rotateY(360deg);
-  -o-transform: scale(2) rotateY(360deg);
-  transform: scale(2) rotateY(360deg);
-  -webkit-transition: all 0.8s ease, width 0s linear, height 0s linear;
-  -moz-transition: all 0.8s ease, width 0s linear, height 0s linear;
-  transition: all 0.8s ease, width 0s linear, height 0s linear;
-  z-index: 2;
-  background: #B6EFDF;
-  color: #496E8C;
-}
-
-code {
-  clear: both;
-  float: left;
-  width: calc(100% - 2.5vw);
-  text-align: center;
-  margin-top: 3vh;
-  line-height: 10vh;
-  height: 10vh;
-  background: #B6EFDF;
-  color: #496E8C;
-}
-</style>
+		<title>FG 賓果樂</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="javascript/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/main.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-  // FLip blocks
-  function randomFlip() {
-
-    var $blocks = $('div');
-    var random = 1 + Math.floor(Math.random() * 107);
-
-    $('div:nth-child(' + random + ')').addClass('flip-it');
-
-    setInterval(function() {
-      var random = 1 + Math.floor(Math.random() * 75);
-      $blocks.removeClass('flip-it');
-      $('div:nth-child(' + random + ')').addClass('flip-it');
-    }, 1250);
-
-  }
-
-  function deploy() {
-    randomFlip();
-  }
-
-  deploy();
+$(function(){
 });
 </script>
 	</head>
 	<body>
-		<h1>FG 大樂透抽獎</h1>
+		<h1>FG</h1>
 		<div>1</div>
 		<div>2</div>
 		<div>3</div>
@@ -178,7 +86,7 @@ $(document).ready(function() {
 		<div>73</div>
 		<div>74</div>
 		<div>75</div>
-		<code><a href="javascript:;">抽號碼</a></code>
+		<code><a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">抽號碼</a></code>
 		<code>var random = 1 + Math.floor(Math.random() * 107);</code>
 	</body>
 </html>
