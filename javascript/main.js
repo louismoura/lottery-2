@@ -23,16 +23,14 @@ function randomFlip(min, max) {
 }
 
 function get_random(doms) {
-  var min = doms.first().text(),
-      max = doms.last().text(),
-      random_pool = [];
+  var random_pool = [];
 
   doms.each(function(i){
-    if ($(this).attr('class') == 'fliped') {
-      return true;
+    if (!$(this).hasClass('fliped') && !$(this).hasClass('flip-it')) {
+      random_pool.push($(this).text());
     }
-    random_pool.push($(this).text());
   });
+
   return random_pool[Math.floor(Math.random() * random_pool.length)];
 }
 
@@ -44,6 +42,8 @@ function card_init(min, max) {
 
 function show() {
   var current_number = $('div.flip-it').first().text();
-  $('#show').append($('<div></div>').text(current_number).addClass('show_card'));
-  $('.show_card').last().fadeIn();
+  if (current_number) {
+    $('#show').append($('<div></div>').text(current_number).addClass('show_card'));
+    $('.show_card').last().fadeIn();
+  }
 }
