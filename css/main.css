@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
-  padding: 5vh 5vw;
+  padding: 1vh 4vw;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -19,7 +19,7 @@ body h1 {
   border-bottom: 4px solid #B6EFDF;
 }
 
-div {
+div.lottery_card {
   float: left;
   width: 7vw;
   height: 7vh;
@@ -45,6 +45,7 @@ div {
   transform-style: preserve-3d;
   will-change: background, transform, color, z-index, width, height;
 }
+
 div.flip-it {
   -webkit-transform: scale(2) rotateY(360deg);
   -moz-transform: scale(2) rotateY(360deg);
@@ -59,14 +60,41 @@ div.flip-it {
   color: #496E8C;
 }
 
+div.fliped {
+  z-index: 2;
+  background: #B6EFDF;
+  color: #496E8C;
+}
+
 code {
   clear: both;
   float: left;
   width: calc(100% - 2.5vw);
   text-align: center;
   margin-top: 3vh;
+  margin-bottom: 3vh;
   line-height: 10vh;
   height: 10vh;
   background: #B6EFDF;
   color: #496E8C;
+}
+
+code#lottery {
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #B6EFDF;
+  color: #496E8C;
+}
+
+#show > div.show_card {
+  z-index: 2;
+  color: #B6EFDF;
+  background: #496E8C;
+  width: 7vw;
+  height: 7vh;
+  line-height: 7vh;
+  margin: .1em;
 }
