@@ -11,6 +11,7 @@ $(document).ready(function() {
   $(document).keyup(function(event){
     if (event.keyCode == 32) {
       randomFlip(_min, _max);
+      show();
       return false;
     }
   });
@@ -37,11 +38,12 @@ function get_random(doms) {
 
 function card_init(min, max) {
   for (i = max; i >= min; i--) {
-    $('h1').after($('<div></div>').text(i).attr('id', 'lot_' + i).addClass('lottery_card'));
+    $('h2').first().after($('<div></div>').text(i).attr('id', 'lot_' + i).addClass('lottery_card'));
   }
 }
 
 function show() {
   var current_number = $('div.flip-it').first().text();
   $('#show').append($('<div></div>').text(current_number).addClass('show_card'));
+  $('.show_card').last().fadeIn();
 }
