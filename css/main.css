@@ -97,14 +97,13 @@ code {
 }
 
 a {
-  width: calc(100% - 2.5vw);
+  width: calc(100% - 5.5vw);
   clear: both;
   float: left;
   border: 0;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
-  font-size: 75%;
   line-height: 5vh;
   height: 5vh;
   padding: 0 2.5em;
